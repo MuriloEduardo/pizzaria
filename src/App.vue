@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <PizzaComponent msg="Welcome to Your Vue.js App"/>
+    <PizzaComponent/>
   </div>
 </template>
 

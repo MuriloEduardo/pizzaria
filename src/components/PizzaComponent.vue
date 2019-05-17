@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div>
     <h1>Pizzaria</h1>
     <div>
-      <label for="create-pizza">Qual pizza você está pensando?</label>
-      <input type="text" id="create-pizza" v-model="text" placeholder="Calabresa...">
+      <label for="create">Qual pizza você está pensando?</label>
+      <input type="text" id="create" v-model="text" placeholder="Calabresa...">
       <button v-on:click="createPizza">Criar</button>
     </div>
     <hr>
