@@ -9,6 +9,12 @@ router.get('/', async (req, res) => {
     res.send(await pizzas.find({}).toArray());
 });
 
+// Get Pizza
+router.get('/:id', async (req, res) => {
+    const pizzas = await loadPizzasCollection();
+    res.send(await pizzas.findOne({ '_id': new mongodb.ObjectID(req.params.id) }));
+});
+
 // Add Root
 router.post('/', async (req, res) => {
     const pizzas = await loadPizzasCollection();

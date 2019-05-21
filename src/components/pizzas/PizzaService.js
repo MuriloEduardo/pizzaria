@@ -21,6 +21,24 @@ class PizzaService {
         });
     }
 
+    // Get Pizza
+    static getPizza(id) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                
+                const res = await axios.get(`${url}${id}`);
+                const data = res.data;
+                
+                data.createdAt = new Date(data.createdAt);
+
+                resolve(data);
+
+            } catch(error) {
+                reject(error);
+            }
+        });
+    }
+
     // Create Pizza
     static insertPizza(text) {
         return axios.post(url, {
